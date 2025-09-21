@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* Neumorphic Shadow Utilities */
+  .shadow-neumorphic {
+    box-shadow: 
+      8px 8px 20px rgba(190, 190, 190, 0.4),
+      -8px -8px 20px rgba(255, 255, 255, 0.9),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  }
+  
+  .shadow-neumorphic-inset {
+    box-shadow: 
+      inset 8px 8px 20px rgba(190, 190, 190, 0.3),
+      inset -8px -8px 20px rgba(255, 255, 255, 0.8),
+      0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .shadow-neumorphic-soft {
+    box-shadow: 
+      4px 4px 12px rgba(190, 190, 190, 0.3),
+      -4px -4px 12px rgba(255, 255, 255, 0.8),
+      0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .shadow-neumorphic-pressed {
+    box-shadow: 
+      inset 6px 6px 12px rgba(190, 190, 190, 0.4),
+      inset -6px -6px 12px rgba(255, 255, 255, 0.7);
+  }
+  
+  .shadow-neumorphic-deep {
+    box-shadow: 
+      12px 12px 30px rgba(190, 190, 190, 0.5),
+      -12px -12px 30px rgba(255, 255, 255, 0.9),
+      0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Dark Theme Neumorphic Shadows */
+  .shadow-neumorphic-dark {
+    box-shadow: 
+      8px 8px 20px rgba(0, 0, 0, 0.6),
+      -8px -8px 20px rgba(55, 65, 81, 0.3),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  }
+  
+  .shadow-neumorphic-dark-inset {
+    box-shadow: 
+      inset 8px 8px 20px rgba(0, 0, 0, 0.5),
+      inset -8px -8px 20px rgba(55, 65, 81, 0.2),
+      0 1px 3px rgba(255, 255, 255, 0.05);
+  }
+  
+  .shadow-neumorphic-dark-soft {
+    box-shadow: 
+      4px 4px 12px rgba(0, 0, 0, 0.4),
+      -4px -4px 12px rgba(55, 65, 81, 0.2),
+      0 1px 2px rgba(255, 255, 255, 0.03);
+  }
+  
+  .shadow-neumorphic-dark-pressed {
+    box-shadow: 
+      inset 6px 6px 12px rgba(0, 0, 0, 0.6),
+      inset -6px -6px 12px rgba(55, 65, 81, 0.1);
+  }
+  
+  .shadow-neumorphic-dark-deep {
+    box-shadow: 
+      12px 12px 30px rgba(0, 0, 0, 0.7),
+      -12px -12px 30px rgba(55, 65, 81, 0.3),
+      0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Premium Glass Effect */
+  .glass-effect {
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .glass-effect-dark {
+    backdrop-filter: blur(20px);
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Premium Gradient Text */
+  .text-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .text-gradient-dark {
+    background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Premium Hover Effects */
+  .hover-lift {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-4px);
+  }
+  
+  /* Enhanced Animations */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow {
+    from { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+    to { box-shadow: 0 0 30px rgba(59, 130, 246, 0.6); }
+  }
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e0e0e0;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #374151;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bebebe;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #6b7280;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a0a0a0;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
